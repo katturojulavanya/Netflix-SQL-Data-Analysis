@@ -16,7 +16,9 @@ This project involves a comprehensive analysis of Netflix's movies and TV shows 
 - Dataset Link: [Movies Dataset](https://www.kaggle.com/datasets/shivamb/netflix-shows?resource=download)
 
 # Schema
-``` DROP TABLE IF EXISTS netflix;
+</> Markdown
+```
+DROP TABLE IF EXISTS netflix;
 CREATE TABLE netflix
 (
     show_id      VARCHAR(5),
@@ -31,4 +33,19 @@ CREATE TABLE netflix
     duration     VARCHAR(15),
     listed_in    VARCHAR(250),
     description  VARCHAR(550)
-);```
+);
+```
+
+# Business Problems and Solutions
+## 1. Count the Number of Movies vs TV Shows ##
+```
+SELECT 
+    type,
+    COUNT(*)
+FROM netflix
+GROUP BY 1;
+```
+##Objective:## Determine the distribution of content types on Netflix.
+
+
+
